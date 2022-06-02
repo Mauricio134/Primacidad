@@ -44,40 +44,43 @@ determinar si es primo o no, mientras que “s” es el número de bases para la
 Ahora, la función nos va a dar como resultado un booleano:
 
 	a) El resultado de Miller será True si el número no es compuesto mientras que para un primo nos retornará False, así que para 
-	   determinar el return se emplea un bucle for en la línea 30 que se ejecutará “s” veces y probará con un “a” random  
-	   entre 2 y n-1 (la base) la función Es_compuesto.
+	determinar el return se emplea un bucle for en la línea 30 que se ejecutará “s” veces y probará con un “a” random  
+	entre 2 y n-1 (la base) la función Es_compuesto.
+	
 
-			for j in range(s):
-   				a = random.randint(2,n-1)
-    				if Es_Compuesto(a,n,t,u):
-      					return False
-  			return True
- 
+		for j in range(s):
+   			a = random.randint(2,n-1)
+    			if Es_Compuesto(a,n,t,u):
+      				return False
+  		return True
+	
+
 
 	b) las variables "t" y "u" son obtenidas desde la línea 27 hasta la 29 con un bucle while 
 	   que va comprobando que “u” sea divisible entre dos, para así igualar u como u/2  y sumando 1 a “t” mientras que se cumpla 
 	   la condición, hallando u-1 = 2^t u.
-			t = 0
-  			u = n-1
-  			while u%2==0:
-    				u = u/2
-    				t = t+1
+	   
+		t = 0
+  		u = n-1
+  		while u%2==0:
+    			u = u/2
+    			t = t+1
 
 4) Impresiones:
 
-	a)Se emplea un buble for que se ejecuta la cantidad de números que hay entre el menor número de “x cifras” pues se pone el segmento que 
+	a) Se emplea un buble for que se ejecuta la cantidad de números que hay entre el menor número de “x cifras” pues se pone el segmento que 
 	  parte desde el menor número primo hasta el mayor par que cumpla con dicha extensión de cifras. Por ejemplo: 
 			
-			for n in range(1001, 9998)
+		for n in range(1001, 9998)
 
 
-	b)Luego se coloca el condicional if (líneas 38, 44, 50) para verificar que el número de “x cifras” no sea par y así evitar ejecuciones innecesarias. 
+	b) Luego se coloca el condicional if (líneas 38, 44, 50) para verificar que el número de “x cifras” no sea par y así evitar ejecuciones innecesarias. 
 	  Entonces verificamos  que el resultado de la función Miller sea verdadero (líneas 39, 45, 50) para así imprimir dicho número primo. Ejemplo:
 
-			if n%2 != 0:
-				if Miller(n, 8):
+		if n%2 != 0:
+			if Miller(n, 8):
 
-	c)Finalmente, para poder encontrar las “s” correctas para probar en cada test de Miller correspondiente a las diferentes extensiones de cifras, hemos probado 
+	c) Finalmente, para poder encontrar las “s” correctas para probar en cada test de Miller correspondiente a las diferentes extensiones de cifras, hemos probado 
 	  con varios números, encontrado que para 3 cifras el “s” adecuado es 5 (línea 39, segundo argumento de Miller); para 4 cifras el “s” 
 	  adecuado es 8 (línea 45, segundo argumento de Miller); para 5 cifras el “s” adecuado es 96 (línea 50, segundo argumento de Miller).
 
