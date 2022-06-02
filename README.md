@@ -9,7 +9,7 @@ Esta función recursiva nos permite resolver códigos de estructura (a^x) mod n 
 cantidad de exponenciaciones que se realice para resolver el problema.
 
 	a) Primero definimos la función con sus parámetros específicos (a: base, x: exponente, n: módulo):
-	def Fermat(a, x, n): (line 3)
+		def Fermat(a, x, n): (line 3)
 
 	b) Dentro de la función se definen las condicionales para la recursividad respectiva:
 	b.1) Primero se determina un if con el resultado base de la función recursiva, con el objetivo de saber en que punto, la
