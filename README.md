@@ -39,9 +39,8 @@ una exponenciación impar `(t*c)%n`.
 
 3) Función Miller (linea24):
 Esta función pone en practica el Test de primalidad de Miller Rabin para ello recibe 2 argumentos, siendo el “n” el número que se debe 
-determinar si es primo o no, mientras que “s” es el número de bases para las cuales se va a probar el “n”. 
-
-Ahora, la función nos va a dar como resultado un booleano:
+determinar si es primo o no, mientras que “s” es el número de bases para las cuales se va a probar el “n”. Una vez ejecutada, la función 
+nos va a retornar como resultado un booleano.
 
 	a) El resultado de Miller será True si el número no es compuesto mientras que para un primo nos retornará False, así que para 
 	determinar el return se emplea un bucle for en la línea 30 que se ejecutará “s” veces y probará con un “a” random  
