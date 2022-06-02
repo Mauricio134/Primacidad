@@ -8,8 +8,8 @@ def Fermat(a, x, n):
     return (t*t)%n;
   else:
     t = Fermat(a, x-1, n);
-    a = a%n;
-    return (t*a)%n;
+    c = a%n;
+    return (t*c)%n;
 
 def Es_Compuesto(a, n, t, x):
   x0 = Fermat(a, x, n)
