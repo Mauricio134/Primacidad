@@ -17,22 +17,22 @@ cantidad de exponenciaciones que se realice para resolver el problema.
 	función recursiva termina su recursión y brinda un valor exacto (el exponente es cero -> el resultado da 1):
 	
 		if x == 0:
-    		    return 1;(lines 4,5)
+    			return 1;(lines 4,5)
 	b.2) Después se determina un elif con el caso de un exponente par. Donde la recursión devuelve una llamada a la misma 
 	función, pero ahora se brinda el cambio del valor x (exponente), el cual se colocará x/2, mientras que los demás valores 
 	siguen constantes:
 	
 		elif x%2 == 0:
-    		    t = Fermat(a, x/2, n);
-    		    return (t*t)%n; (lines 6, 7, 8)
+    			t = Fermat(a, x/2, n);
+    			return (t*t)%n; (lines 6, 7, 8)
 	b.3) Por último, se coloca un else, para el caso de ingresar un exponente impar. Por tanto, con esto la función realizaría 
 	un nuevo llamado a la misma función pero ahora con el exponente reducido en uno, para asi poder volverlo par y ahora se 
 	opere con el elif que está especificado para exponentes pares:
 	
 		else:
-    		    t = Fermat(a, x-1, n);
-    		    c = a%n;
-    		    return (t*c)%n; (lines 9, 10, 11)
+    			t = Fermat(a, x-1, n);
+    			c = a%n;
+    			return (t*c)%n; (lines 9, 10, 11)
 Si notamos, cada return de las condicionales da diferentes valores. Por ejemplo en el if  nos retorna 1 ya que es el caso 
 base, en el caso del elif retorna la operación de una exponenciación par ((t*t)%n) y en el else retorna la operación de 
 una exponenciación impar ((t*c)%n).
